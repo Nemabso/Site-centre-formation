@@ -7,4 +7,4 @@ La base de données utilisée est MongoDB. Connectez-vous sur le lien suivant po
 
 Voici les cordonnées: Adresse email:"nemabsostudio@gmail.com"   Mot de passe:"dbNemabso"
 
-Les technologies utilisées: MongoDb, ReactJs, NodeJs.
+Les technologies utilisées: MongoDb, ReactJs, NodeJs, HTML, CSS.
