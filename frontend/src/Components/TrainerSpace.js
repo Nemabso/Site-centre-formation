@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import "../Styles/TrainerSpace.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
-import backgroundImage from "../assets/background.jpeg";
-import Image from "react-bootstrap/Image";
+// import { Link } from "react-router-dom";
+// import backgroundImage from "../assets/background.jpeg";
+// import Image from "react-bootstrap/Image";
 import logo from "../assets/logoSite.jpeg"
 import { connect } from "react-redux";
 import { BsGeoAlt, BsFillEnvelopeFill } from "react-icons/bs";
@@ -23,7 +23,7 @@ function TrainerSpace(props) {
   const [formations, setFormations] = useState([]);
   const [users, setUsers] = useState([]);
   const [currentFormation, setCurrentFormation] = useState({});
-  const [formationname, setFormationName] = useState("");
+  // const [formationname, setFormationName] = useState("");
   const [isChoosed, setIsChoosed] = useState(0);
 
 
@@ -40,13 +40,9 @@ function TrainerSpace(props) {
       getUsers();
       fetchUserDetails();
 
-    } else {
-      fetchUserDetails();
-
-    }
+    } else { fetchUserDetails() }
 
     if (didMountRef.current) {
-
       // if login success, go to home screen
       if (props.isAuth) {
         //props.setisauth();
@@ -56,20 +52,18 @@ function TrainerSpace(props) {
           forceUpdate();
           getUsers();
           fetchUserDetails();
-
         }
         else {
           forceUpdate();
           fetchUserDetails();
         }
-
       } else if (!props.isAuth && !props.isLoading) {
         alert(props.errMsg);
       }
-    } else {
-      didMountRef.current = true;
-    }
+    } else { didMountRef.current = true }
   }, [props.isAuth, props.isLoading]);
+
+
   const forceUpdate = React.useReducer(bool => !bool)[1];
 
   function getUsers() {
@@ -77,8 +71,6 @@ function TrainerSpace(props) {
       method: "post",
       url: "/getUsers",
       baseURL: baseURL,
-
-
     })
       .then((res) => {
 
@@ -144,57 +136,57 @@ function TrainerSpace(props) {
     else {
       return (
         <div>
-          
-    
 
-            <Container>
-              <Row>
-                <Col xs={12} sm={2} md={3} >
 
-                </Col>
-                <Col sm={8} md={6}>
-                  <p class="formationTitle">DÉTAILS DE LA FORMATION</p>
-                  <p class="detail"> NOM: {currentFormation.formationName.toUpperCase()}</p>
-                  <p class="detail"> DESCRIPTION: {currentFormation.description}</p>
-                  <div class="column2">
-                    <div
-                      class="video"
+
+          <Container>
+            <Row>
+              <Col xs={12} sm={2} md={3} >
+
+              </Col>
+              <Col sm={8} md={6}>
+                <p class="formationTitle">DÉTAILS DE LA FORMATION</p>
+                <p class="detail"> NOM: {currentFormation.formationName.toUpperCase()}</p>
+                <p class="detail"> DESCRIPTION: {currentFormation.description}</p>
+                <div class="column2">
+                  <div
+                    class="video"
+                    style={{
+                      position: "relative",
+                      paddingBottom: "56.25%" /* 16:9 */,
+                      paddingTop: 35,
+
+                      height: 0,
+                    }}
+                  >
+                    <iframe
                       style={{
-                        position: "relative",
-                        paddingBottom: "56.25%" /* 16:9 */,
-                        paddingTop: 35,
-
-                        height: 0,
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
                       }}
-                    >
-                      <iframe
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          width: "100%",
-                          height: "100%",
-                        }}
-                        src={currentFormation.link}
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
+                      src={currentFormation.link}
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
                   </div>
+                </div>
 
-                  <p class="detail"> LIEN: <a href={currentFormation.link}>{currentFormation.link}</a></p>
+                <p class="detail"> LIEN: <a href={currentFormation.link}>{currentFormation.link}</a></p>
 
-                </Col>
-                <Col sm={2} md={3}>
+              </Col>
+              <Col sm={2} md={3}>
 
-                </Col>
+              </Col>
 
-              </Row>
+            </Row>
 
-            </Container>
-          
+          </Container>
+
 
         </div>
       )

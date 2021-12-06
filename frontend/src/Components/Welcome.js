@@ -3,13 +3,13 @@ import "../Styles/Welcome.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
-import backgroundImage from "../assets/formation1.jpeg";
+// import { Link } from "react-router-dom";
+// import backgroundImage from "../assets/formation1.jpeg";
 import formation2 from "../assets/formation2.jpeg";
 import formation3 from "../assets/formation3.jpeg";
 import formation4 from "../assets/formation4.jpeg";
 import logo from "../assets/logoSite.jpeg"
-import Image from "react-bootstrap/Image";
+// import Image from "react-bootstrap/Image";
 import { BsGeoAlt, BsFillEnvelopeFill } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 
@@ -17,19 +17,18 @@ export default class Welcome extends Component {
   render() {
     return (
       <div >
-        <div class="sect1">
+        <div className="sect1">
           <Container>
             <Row>
               <Col sm={6} className="col11" >
                 <div class="column2">
                   <div
-                    class="video"
+                    className="video"
                     style={{
                       position: "relative",
                       paddingBottom: "56.25%" /* 16:9 */,
                       paddingTop: 35,
-
-                      height: 0,
+                      height: 0
                     }}
                   >
                     <iframe
@@ -52,13 +51,13 @@ export default class Welcome extends Component {
               </Col>
 
               <Col sm={6}>
-                <div class="col12">
-                  <p class="title12">
+                <div className="col12">
+                  <p className="title12">
                     Une offre de formation 100% sur mesure
                   </p>
-                  <p class="secondtitle12">Vous êtes intéressé par la restauration ?
+                  <p className="secondtitle12">Vous êtes intéressé par la restauration ?
                   </p>
-                  <p class="secondtitle12">
+                  <p className="secondtitle12">
                     EUREKA vous accompagne et vous conseille dans vos projets de formation.
                   </p>
                   <a href="###"> <div class="knowMore">En savoir plus</div></a>
@@ -94,9 +93,9 @@ export default class Welcome extends Component {
           <Row className="cont31">
             <Col md={4}>
               <div class="formationItem">
-                <img src={formation2} class="imgFormation"></img>
-                <p class="formTitle">FORMATION 1</p>
-                <p class="formationText">
+                <img src={formation2} className="imgFormation" alt="formation2" ></img>
+                <p className="formTitle">FORMATION 1</p>
+                <p className="formationText">
                   {" "}
                   Dans un contexte économique complexe marqué par l’arrivée de
                   nouvelles générations, par l’impact des nouvelles
@@ -107,10 +106,10 @@ export default class Welcome extends Component {
               </div>
             </Col>
             <Col sm={6} md={4} >
-              <div class="formationItem">
-                <img src={formation3} class="imgFormation"></img>
-                <p class="formTitle">FORMATION 2</p>
-                <p class="formationText">
+              <div className="formationItem">
+                <img src={formation3} className="imgFormation" alt="formation3" ></img>
+                <p className="formTitle">FORMATION 2</p>
+                <p className="formationText">
                   Dans un contexte économique complexe marqué par l’arrivée de
                   nouvelles générations, par l’impact des nouvelles
                   technologies de communication, par la nécessité de revoir
@@ -120,10 +119,10 @@ export default class Welcome extends Component {
               </div>
             </Col>
             <Col sm={6} md={4} >
-              <div class="formationItem">
-                <img src={formation4} class="imgFormation"></img>
-                <p class="formTitle">FORMATION 3</p>
-                <p class="formationText">
+              <div className="formationItem">
+                <img src={formation4} className="imgFormation" alt="formation4" ></img>
+                <p className="formTitle">FORMATION 3</p>
+                <p className="formationText">
                   Dans un contexte économique complexe marqué par l’arrivée de
                   nouvelles générations, par l’impact des nouvelles
                   technologies de communication, par la nécessité de revoir
@@ -140,64 +139,64 @@ export default class Welcome extends Component {
 
 
         <Container className="cont4">
-              <Row className="cont41">
-                <Col xs={12} sm={6} md={3} >
-                  <div class="col4">
-                    <img src={logo} class="logo"></img>
+          <Row className="cont41">
+            <Col xs={12} sm={6} md={3} >
+              <div className="col4">
+                <img src={logo} className="logo" alt="logo"></img>
 
-                  </div>
-                </Col> 
-                <Col sm={6} md={3} >
-                  <div class="col4">
-                    <p class="contactUs">Nous contacter :</p>
-                    <Row className="rowIcons">
-                      <Col sm={4} xs={4}>
-                        <BsGeoAlt class="icon" />
-                      </Col>
-                      <Col sm={4} xs={4}  >
-                        <FiPhoneCall class="icon" />
-                      </Col>
-                      <Col sm={4} xs={4} >
-                        <BsFillEnvelopeFill class="icon" />
-                      </Col>
-                    </Row>
+              </div>
+            </Col>
+            <Col sm={6} md={3} >
+              <div class="col4">
+                <p class="contactUs">Nous contacter :</p>
+                <Row className="rowIcons">
+                  <Col sm={4} xs={4}>
+                    <BsGeoAlt class="icon" />
+                  </Col>
+                  <Col sm={4} xs={4}  >
+                    <FiPhoneCall class="icon" />
+                  </Col>
+                  <Col sm={4} xs={4} >
+                    <BsFillEnvelopeFill class="icon" />
+                  </Col>
+                </Row>
 
-                  </div>
-                </Col>
-                <Col sm={6} md={3}>
-                  <div class="col4">
-                    <p class="legal">Mentions légales</p>
-                    <p class="condition">Confidentialité</p>
-                    <p class="condition">Conditions Générales</p>
+              </div>
+            </Col>
+            <Col sm={6} md={3}>
+              <div class="col4">
+                <p class="legal">Mentions légales</p>
+                <p class="condition">Confidentialité</p>
+                <p class="condition">Conditions Générales</p>
 
-                  </div>
-                </Col>
-                <Col  sm={6} md={3}>
-                  <div class="col4">
-                    <p class="legal">Qui sommes nous ?</p>
-                    <p class="condition">Blog</p>
-                    <p class="condition">Former et recruter</p>
+              </div>
+            </Col>
+            <Col sm={6} md={3}>
+              <div class="col4">
+                <p class="legal">Qui sommes nous ?</p>
+                <p class="condition">Blog</p>
+                <p class="condition">Former et recruter</p>
 
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+              </div>
+            </Col>
+          </Row>
+        </Container>
 
       </div>
     );
   }
 }
-const styles = {
-  grid: {
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
-  row: {
-    marginLeft: 0,
-    marginRight: 0,
-  },
-  col: {
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
-};
+// const styles = {
+//   grid: {
+//     paddingLeft: 0,
+//     paddingRight: 0,
+//   },
+//   row: {
+//     marginLeft: 0,
+//     marginRight: 0,
+//   },
+//   col: {
+//     paddingLeft: 0,
+//     paddingRight: 0,
+//   },
+// };

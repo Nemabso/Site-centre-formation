@@ -2,19 +2,19 @@ import React, { useState, useRef, useEffect } from "react";
 import "../Styles/TrainerSpace.css";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
-import backgroundImage from "../assets/background.jpeg";
-import Image from "react-bootstrap/Image";
+// import { Link } from "react-router-dom";
+// import backgroundImage from "../assets/background.jpeg";
+// import Image from "react-bootstrap/Image";
 import logo from "../assets/logoSite.jpeg"
 import { connect } from "react-redux";
 import { BsGeoAlt, BsFillEnvelopeFill } from "react-icons/bs";
 import { FiPhoneCall } from "react-icons/fi";
 import axios from "axios";
 import { baseURL } from "../constants";
-import AddFormation from "./AddFormation";
+// import AddFormation from "./AddFormation";
 import { useHistory } from "react-router-dom";
 import { login, setisauth, setisadmin, setlistvalue, setaddvalue } from "../Actions/loginActions";
-import { setvalueauth } from "../Actions/loginActions";
+// import { setvalueauth } from "../Actions/loginActions";
 
 
 function Listformations(props) {
@@ -26,8 +26,8 @@ function Listformations(props) {
     const [descriptionModified, setDescriptionModified] = useState("");
     const [linkModified, setLinkModified] = useState("");
     const [nameformationModified, setNameFormationModified] = useState("");
-    const didMountRef = useRef(false);
-    const forceUpdate = React.useReducer(bool => !bool)[1];
+    // const didMountRef = useRef(false);
+    // const forceUpdate = React.useReducer(bool => !bool)[1];
 
     const history = useHistory();
     useEffect(() => {
@@ -52,7 +52,7 @@ function Listformations(props) {
 
         })
             .then((res) => {
-                const message = res.data.message;
+                // const message = res.data.message;
 
                 if (res.data.value) {
                     alert("Formation a été modifiée !");
@@ -85,7 +85,7 @@ function Listformations(props) {
 
         })
             .then((res) => {
-                const message = res.data.message;
+                // const message = res.data.message;
 
                 if (res.data.value) {
 
@@ -134,7 +134,7 @@ function Listformations(props) {
 
     const listFormations = () => {
         if (isChoosed === 0) {
-            if (formations.length != 0) {
+            if (formations.length !== 0) {
                 return (
                     formations.map((item) => (
                         <div class="formDiv0"  >
@@ -252,7 +252,7 @@ function Listformations(props) {
                         </Row>
 
                     </Container>
-                    
+
                     <Container className="dmContainer">
                         <Row>
                             <Col xs={12} sm={6} className="colll1" >
@@ -331,7 +331,7 @@ function Listformations(props) {
                     <Row className="cont41">
                         <Col xs={12} sm={6} md={3} >
                             <div class="col4">
-                                <img src={logo} class="logo"></img>
+                                <img src={logo} class="logo" alt="logo" ></img>
 
                             </div>
                         </Col>
