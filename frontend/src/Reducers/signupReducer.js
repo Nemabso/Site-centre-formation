@@ -1,9 +1,4 @@
-import {
-  SIGNUP_REQUEST,
-  SIGNUP_SUCCESS,
-  SIGNUP_FAILURE,
-  SET_IS_AUTH
-} from '../Actions/signupActions';
+import { SIGNUP_REQUEST, SIGNUP_SUCCESS, SIGNUP_FAILURE, SET_IS_AUTH } from '../Actions/signupActions';
 
 // init state for signup
 const initState = {

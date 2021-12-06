@@ -19,10 +19,9 @@ function App() {
         <Route exact path="/inscription" component={Registering} />
         <Route exact path="/listformations" component={Listformations} />
         <Route exact path="/addformation" component={AddFormation} />
-        
       </Switch>
     </div>
-  );
+  )
 }
 
 export default App;
