@@ -33,13 +33,13 @@ export const persistor = persistStore(store);
 
 ReactDOM.render(
   <React.StrictMode>
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-  <Router history={history}>
-    <App />
-  </Router>,
-  </PersistGate>
-  </Provider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router history={history}>
+          <App />
+        </Router>,
+      </PersistGate>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

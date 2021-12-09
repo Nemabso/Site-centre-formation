@@ -4,7 +4,7 @@ import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
-  SET_AUTH_TOKEN,
+  // SET_AUTH_TOKEN,
   SET_CURRENT_USER,
   LOGOUT_USER,
   SET_VALUE_AUTH,
@@ -37,7 +37,6 @@ const loginReducer = (state = initState, action) => {
         isLoading: true,
       };
     case LOGIN_SUCCESS:
-
 
       return {
         isAuth: true,

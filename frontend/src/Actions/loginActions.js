@@ -68,13 +68,13 @@ export const setValueAuth = (value) => {
 export const setIsAuth = () => {
   return {
     type: SET_IS_AUTH,
-    
+
   };
 };
 export const setIsAdmin = () => {
   return {
     type: SET_IS_ADMIN,
-    
+
   };
 };
 export const setListValue = (value) => {
@@ -123,27 +123,19 @@ export const login = (loginData) => {
       method: "post",
       url: "/login",
       baseURL: baseURL,
-
       data: {
         email: loginData.email,
         password: loginData.password,
       },
-    })
-      .then((res) => {
-        if (res.data.value) {
-          dispatch(loginSuccess(res.data));
-          
-        } else {
-          dispatch(loginFailure(res.data.message));
-        }
-      })
-
-      .catch((err) => {
-       
-
-        dispatch(loginFailure(err.response.data.message));
-        
-      });
+    }).then((res) => {
+      if (res.data.value) {
+        dispatch(loginSuccess(res.data));
+      } else {
+        dispatch(loginFailure(res.data.message));
+      }
+    }).catch((err) => {
+      dispatch(loginFailure(err.response.data.message));
+    });
   };
 };
 export const setaddvalue = (value) => {
@@ -177,5 +169,5 @@ export const setcurrenttrainer = (data) => {
   return (dispatch) => {
     dispatch(setCurrentTrainer(data));
   };
-  
+
 };

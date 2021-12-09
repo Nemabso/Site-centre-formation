@@ -32,13 +32,7 @@ export default class Welcome extends Component {
                     }}
                   >
                     <iframe
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                      }}
+                      style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", }}
                       src="https://www.youtube.com/embed/BOwd8nsDh5Y"
                       title="YouTube video player"
                       frameborder="0"
@@ -72,15 +66,13 @@ export default class Welcome extends Component {
         <Container className="cont2">
           <Row>
             <Col sm={12}>
-              <div class="cont21">
-                <p class="actor">VOUS ÊTES ACTEUR DE LA RESTAURATION ET DU COMMERCE ?</p>
-                <p class="actorEnd">VOUS SOUHAITEZ FORMER ET RECRUTER VOTRE PERSONNEL ? </p>
-                <p class="solution">EUREKA ! Votre solution est là !</p>
-                <p class="solution">- Nous élaborons des formations sur mesure assurées par des professionnels.</p>
-                <p class="solution">- Nous recrutons vos futurs collaborateurs</p>
-                <p class="solutionEnd">- Nous vous accompagnons dans le cadre d'une formation financée à 100%</p>
-
-
+              <div className="cont21">
+                <p className="actor">VOUS ÊTES ACTEUR DE LA RESTAURATION ET DU COMMERCE ?</p>
+                <p className="actorEnd">VOUS SOUHAITEZ FORMER ET RECRUTER VOTRE PERSONNEL ? </p>
+                <p className="solution">EUREKA ! Votre solution est là !</p>
+                <p className="solution">- Nous élaborons des formations sur mesure assurées par des professionnels.</p>
+                <p className="solution">- Nous recrutons vos futurs collaborateurs</p>
+                <p className="solutionEnd">- Nous vous accompagnons dans le cadre d'une formation financée à 100%</p>
               </div>
             </Col>
           </Row>
@@ -134,10 +126,6 @@ export default class Welcome extends Component {
           </Row>
         </Container>
 
-
-
-
-
         <Container className="cont4">
           <Row className="cont41">
             <Col xs={12} sm={6} md={3} >
@@ -147,35 +135,35 @@ export default class Welcome extends Component {
               </div>
             </Col>
             <Col sm={6} md={3} >
-              <div class="col4">
-                <p class="contactUs">Nous contacter :</p>
+              <div className="col4">
+                <p className="contactUs">Nous contacter :</p>
                 <Row className="rowIcons">
                   <Col sm={4} xs={4}>
                     <BsGeoAlt class="icon" />
                   </Col>
                   <Col sm={4} xs={4}  >
-                    <FiPhoneCall class="icon" />
+                    <FiPhoneCall className="icon" />
                   </Col>
                   <Col sm={4} xs={4} >
-                    <BsFillEnvelopeFill class="icon" />
+                    <BsFillEnvelopeFill className="icon" />
                   </Col>
                 </Row>
 
               </div>
             </Col>
             <Col sm={6} md={3}>
-              <div class="col4">
-                <p class="legal">Mentions légales</p>
-                <p class="condition">Confidentialité</p>
-                <p class="condition">Conditions Générales</p>
+              <div className="col4">
+                <p className="legal">Mentions légales</p>
+                <p className="condition">Confidentialité</p>
+                <p className="condition">Conditions Générales</p>
 
               </div>
             </Col>
             <Col sm={6} md={3}>
-              <div class="col4">
-                <p class="legal">Qui sommes nous ?</p>
-                <p class="condition">Blog</p>
-                <p class="condition">Former et recruter</p>
+              <div className="col4">
+                <p className="legal">Qui sommes nous ?</p>
+                <p className="condition">Blog</p>
+                <p className="condition">Former et recruter</p>
 
               </div>
             </Col>
@@ -186,17 +174,3 @@ export default class Welcome extends Component {
     );
   }
 }
-// const styles = {
-//   grid: {
-//     paddingLeft: 0,
-//     paddingRight: 0,
-//   },
-//   row: {
-//     marginLeft: 0,
-//     marginRight: 0,
-//   },
-//   col: {
-//     paddingLeft: 0,
-//     paddingRight: 0,
-//   },
-// };

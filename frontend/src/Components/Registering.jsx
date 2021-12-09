@@ -5,13 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useHistory } from "react-router-dom";
 // import backgroundImage from "../assets/background.jpeg";
 // import Image from "react-bootstrap/Image";
-import logo from "../assets/logoSite.jpeg";
-import { BsGeoAlt, BsFillEnvelopeFill } from "react-icons/bs";
-import { FiPhoneCall } from "react-icons/fi";
 // import { Alert } from 'react-alert'
 
 import { connect } from "react-redux";
 import { signup, setisauth } from "../Actions/signupActions";
+import Footer from "./Footer";
 
 
 function Registering(props) {
@@ -60,7 +58,7 @@ function Registering(props) {
 
       <Container className="center0">
         <Container>
-          <p class="clientSpace">ESPACE FORMATEUR</p>
+          <p className="clientSpace">ESPACE FORMATEUR</p>
         </Container>
 
         <Container>
@@ -69,87 +67,38 @@ function Registering(props) {
 
             </Col>
             <Col sm={8} md={6}>
-              <div class="loginDiv">
-                <p class="alreadyReg">JE CRÉE MON COMPTE</p>
-                <p class="above">NOM ET PRÉNOM *</p>
-                <input class="inputAccount"
+              <div className="loginDiv">
+                <p className="alreadyReg">JE CRÉE MON COMPTE</p>
+                <p className="above">NOM ET PRÉNOM *</p>
+                <input className="inputAccount"
                   placeholder="Renseignez votre nom et prénom"
                   onChange={e => setName(e.target.value)} />
 
-                <p class="above">ADRESSE EMAIL *</p>
-                <input class="inputAccount"
+                <p className="above">ADRESSE EMAIL *</p>
+                <input className="inputAccount"
                   placeholder="Renseignez votre email"
                   onChange={e => setEmail(e.target.value)} />
 
-                <p class="above">MOT DE PASSE *</p>
-                <input class="inputAccount"
+                <p className="above">MOT DE PASSE *</p>
+                <input className="inputAccount"
                   placeholder="Saisissez votre mot de passe"
                   secureTextEntry={true}
                   onChange={e => setPassword(e.target.value)}
                   type="password"
                 />
 
-
                 <a href="###" onClick={() => signupHandler()}>
-                  <div class="logIn" >M'INSCRIRE</div></a>
+                  <div className="logIn" >M'INSCRIRE</div></a>
                 <a href="/espace-formateur" >
-                  <div class="logIn" >M'IDENTIFIER</div></a>
-
+                  <div className="logIn" >M'IDENTIFIER</div></a>
               </div>
             </Col>
             <Col sm={2} md={3}>
-
             </Col>
-
           </Row>
-
         </Container>
-
       </Container>
-      <Container className="cont4">
-        <Row className="cont41">
-          <Col xs={12} sm={6} md={3} >
-            <div class="col4">
-              <img src={logo} class="logo"></img>
-
-            </div>
-          </Col>
-          <Col sm={6} md={3} >
-            <div class="col4">
-              <p class="contactUs">Nous contacter :</p>
-              <Row className="rowIcons">
-                <Col sm={4} xs={4}>
-                  <BsGeoAlt class="icon" />
-                </Col>
-                <Col sm={4} xs={4}  >
-                  <FiPhoneCall class="icon" />
-                </Col>
-                <Col sm={4} xs={4} >
-                  <BsFillEnvelopeFill class="icon" />
-                </Col>
-              </Row>
-
-            </div>
-          </Col>
-          <Col sm={6} md={3}>
-            <div class="col4">
-              <p class="legal">Mentions légales</p>
-              <p class="condition">Confidentialité</p>
-              <p class="condition">Conditions Générales</p>
-
-            </div>
-          </Col>
-          <Col sm={6} md={3}>
-            <div class="col4">
-              <p class="legal">Qui sommes nous ?</p>
-              <p class="condition">Blog</p>
-              <p class="condition">Former et recruter</p>
-
-            </div>
-          </Col>
-        </Row>
-      </Container>
-
+      <Footer />
     </div >
   );
 
