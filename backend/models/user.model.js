@@ -10,7 +10,7 @@ const userSchema = new Schema({
         type: String,
         trim: true,
         required: true,
-        
+
         //minlength: [3, "Fist name too short"]
     },
 
@@ -23,13 +23,13 @@ const userSchema = new Schema({
     email: {
         type: String,
         required: true,
-        
+
         //minlength: [6, "Email invalid"]
     },
-    formations:{
+    formations: {
         type: Array,
         default: [],
-      },
+    },
 
 });
 

@@ -1,17 +1,17 @@
 
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://mtoudalachi:Mtoudalachi123@cluster0.rtxdd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+// const mongoose = require('mongoose');
+// const dotenv = require('dotenv');
+// const { MongoClient } = require('mongodb');
+// const uri = "mongodb+srv://mtoudalachi:Mtoudalachi123@cluster0.rtxdd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const connectDB = require("./DB/connection")
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 const userapi = require('./routes/userapi');
-dotenv.config();
 
 // parse application/json
 app.use(bodyParser.json())
