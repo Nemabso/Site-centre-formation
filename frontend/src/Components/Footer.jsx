@@ -27,7 +27,7 @@ export default function Footer() {
                                     <FiPhoneCall className="icon" />
                                 </Col>
                                 <Col sm={4} xs={4} >
-                                    <BsFillEnvelopeFill className="icon" />
+                                    <a href="mailto:dominique.dura@orange.fr" className='text-primary'><BsFillEnvelopeFill className="icon" /></a>
                                 </Col>
                             </Row>
                         </div>
